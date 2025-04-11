@@ -1,0 +1,92 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dog {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #755A4A; /* Main body color */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+.ear {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-color: #8B6A4B; /* Ear color */
+    border-radius: 20px;
+    top: -10px; /* Positioning the ears above the head */
+}
+
+.left-ear {
+    left: -20px; 
+}
+
+.right-ear {
+    right: -20px; 
+}
+
+.eye {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 4px solid #4C3B32; /* Eye border color */
+    top: 40px;
+}
+
+.left-eye {
+    left: 40px;
+}
+
+.right-eye {
+    right: 40px;
+}
+
+.pupil {
+    width: 12px;
+    height: 12px;
+    background-color: black; /* Pupil color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blink {
+    height: 0px; /* Hide eyes */
+}
+
+.dog::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background-color: #8B6A4B; /* Snout color */
+    border-radius: 20px;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dog::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: #BAA897; /* Tongue color */
+    border-radius: 10px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
